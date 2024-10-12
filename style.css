@@ -1,0 +1,271 @@
+html {
+    font-size: 62.5%;
+}
+
+*::before,
+*::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: var(--white);
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+:root {
+    --dark-blue-main-background-color: hsl(218, 28%, 13%);
+    --dark-blue-intro-email-signup: hsl(217, 28%, 15%);
+    --dark-blue-footer-background-color: hsl(216, 53%, 9%);
+    --dark-blue-testimonial-background-color: hsl(219, 30%, 18%);
+
+    --cyan-call-to-action-inside: hsl(176, 68%, 64%);
+    --blue-call-to-action-inside: hsl(198, 60%, 50%);
+    --light-red-error: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--white);
+    background-color: var(--dark-blue-main-background-color);
+}
+
+#app {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    padding: 2.2rem;
+}
+
+.capsule {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-logo {
+    width: 8.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    margin: 0 2.2rem;
+}
+
+h1 {
+    margin: 2.0rem 0 1.5rem;
+}
+
+.cta {
+    color: var(--white);
+    /* border: 0.1rem solid wheat; */
+    padding: 1.2rem 6.7rem;
+    border-radius: 2.5rem;
+    margin-top: 2.8rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8.8rem;
+    margin: 5.8rem 2.2rem;
+}
+
+.service-icon img {
+    margin: 0 auto 2.8rem;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.ourwork-content {
+    margin: 5.8rem 2.2rem;
+}
+
+.ourwork-content img {
+    margin-bottom: 3.8rem;
+}
+
+.ourwork-content h2 {
+    margin-bottom: 1.8rem;
+}
+
+.ourwork-content a {
+    width: fit-content;
+    color: var(--cyan-call-to-action-inside);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+    border-bottom: 0.1rem solid var(--cyan-call-to-action-inside);
+}
+
+.arrow-icon {
+    margin-top: 0.5rem;
+}
+
+.review-content {
+    margin: 12.9rem 2.2rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    border-radius: 1.0rem;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -4.5rem;
+}
+
+.reviewer-card {
+    background-color: var(--dark-blue-testimonial-background-color);
+    padding: 2.2rem;
+}
+
+.reviewer-details {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-top: 1.8rem;
+}
+
+.reviewer-details img {
+    width: 4.2rem;
+    border-radius: 100%;
+}
+
+.review-position {
+    font-size: 1.0rem;
+    color: gainsboro;
+}
+
+.register-page {
+    height: 22.5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    /* border: 1px solid; */
+}
+
+.up {
+    background-color: var(--dark-blue-main-background-color);
+}
+
+.down {
+    background-color: var(--dark-blue-footer-background-color);
+}
+
+.register-content {
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    padding: 3.5rem 2.2rem;
+    margin: auto 2.2rem;
+    background-color: var(--dark-blue-intro-email-signup);
+    border-radius: 1.6rem;
+    box-shadow: 0.3rem 0.4rem 0.5rem var(--dark-blue-footer-background-color);
+}
+
+.register-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+}
+
+input, 
+button[type='submit'] {
+    width: 100%;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+    border: 1px solid;
+}
+
+footer {
+    background-color: var(--dark-blue-footer-background-color);
+    padding: 12.3rem 2.2rem 2.5rem;
+}
+
+.sitemap-page {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.0rem;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+address div {
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+}
+
+.sitemap-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3.0rem;
+}
+
+.sitemap-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
