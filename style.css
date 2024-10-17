@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
 html {
     font-size: 62.5%;
 }
@@ -18,6 +28,7 @@ img {
 button {
     border: none;
     background-color: transparent;
+    padding: 1.5rem 2.2rem;
 }
 
 a {
@@ -29,6 +40,11 @@ a {
 input {
     outline: none;
     border: none;
+    display: block;
+}
+
+label {
+    display: block;
 }
 
 ul {
@@ -48,113 +64,151 @@ ul {
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--white);
+    background-image: url('images/bg-curvy-mobile.svg');
     background-color: var(--dark-blue-main-background-color);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
 }
 
 #app {
     position: relative;
 }
 
+.capsule {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-page,
+.services-page,
+.ourwork-page,
+.review-page {
+    padding: 13.5rem 2.0rem;
+}
+
+
+
+
+
 header {
     position: absolute;
     width: 100%;
-    padding: 2.2rem;
+    padding: 2.0rem;
 }
 
-.capsule {
-    max-width: 1024px;
-    margin: 0 auto;
+header .capsule {
+    max-width: 1120px;
 }
 
 .navigation {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .page-logo {
-    width: 8.5rem;
+    width: 9.5rem;
 }
 
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.0rem;
 }
+
+nav ul li {
+    padding: 0.5rem;
+}
+
+
+
+
 
 .hero-page {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    align-items: end;
+    margin-top: 0;
+    margin-bottom: 3.5rem;
 }
 
 .hero-content {
-    margin: 0 2.2rem;
+    text-align: center;
+    max-width: 65.2rem;
+}
+
+h1, 
+h2 {
+    font-family: 'Raleway';
+    margin: 1.5rem 0;
 }
 
 h1 {
-    margin: 2.0rem 0 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
 }
 
-.cta {
-    color: var(--white);
-    /* border: 0.1rem solid wheat; */
-    padding: 1.2rem 6.7rem;
-    border-radius: 2.5rem;
-    margin-top: 2.8rem;
+.hero-content p {
+    max-width: 49.5rem;
+    margin: 1.5rem auto;
 }
+
+
+
+
 
 .services-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8.8rem;
-    margin: 5.8rem 2.2rem;
-}
-
-.service-icon img {
-    margin: 0 auto 2.8rem;
+    gap: 5.8rem;
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
+
+
+
+
 .ourwork-content {
-    margin: 5.8rem 2.2rem;
-}
+    display: grid;
+    grid-template-columns: 1fr;
 
-.ourwork-content img {
-    margin-bottom: 3.8rem;
-}
-
-.ourwork-content h2 {
-    margin-bottom: 1.8rem;
+    gap: 3.8rem;
 }
 
 .ourwork-content a {
-    width: fit-content;
     color: var(--cyan-call-to-action-inside);
+    border-bottom: 0.1rem solid var(--cyan-call-to-action-inside);
     display: flex;
     align-items: center;
+    width: fit-content;
     gap: 0.6rem;
-    margin-top: 1.8rem;
-    border-bottom: 0.1rem solid var(--cyan-call-to-action-inside);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
 }
 
-.arrow-icon {
-    margin-top: 0.5rem;
-}
+
+
+
 
 .review-content {
-    margin: 12.9rem 2.2rem;
+    max-width: 1120px;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.8rem;
-    border-radius: 1.0rem;
+    gap: 2.5rem;
 }
 
 .quote-icon {
@@ -164,36 +218,38 @@ h1 {
 
 .reviewer-card {
     background-color: var(--dark-blue-testimonial-background-color);
-    padding: 2.2rem;
+    padding: 2.2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
 }
 
 .reviewer-details {
     display: flex;
+    gap: 1.2rem;
     align-items: center;
-    gap: 1.3rem;
-    margin-top: 1.8rem;
 }
 
 .reviewer-details img {
-    width: 4.2rem;
-    border-radius: 100%;
+    width: 3.8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
 }
 
-.review-position {
-    font-size: 1.0rem;
-    color: gainsboro;
-}
+
+
+
 
 .register-page {
-    height: 22.5rem;
+    position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    position: relative;
-    /* border: 1px solid; */
+    height: 25.5rem;
 }
 
 .up {
     background-color: var(--dark-blue-main-background-color);
+
 }
 
 .down {
@@ -201,55 +257,57 @@ h1 {
 }
 
 .register-content {
+    width: 800px;
     height: fit-content;
     position: absolute;
     top: 0;
     bottom: 0;
-    margin: auto;
+    margin: auto 2.0rem;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 3.5rem 2.2rem;
-    margin: auto 2.2rem;
     background-color: var(--dark-blue-intro-email-signup);
-    border-radius: 1.6rem;
-    box-shadow: 0.3rem 0.4rem 0.5rem var(--dark-blue-footer-background-color);
-}
-
-.register-content h2 {
-    margin-bottom: 1.5rem;
+    border-radius: 1.2rem;
+    padding: 3.5rem 2.5rem;
 }
 
 form {
+    margin-top: 2.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2.2rem;
+    gap: 2.0rem;
 }
 
-input, 
-button[type='submit'] {
+input {
     width: 100%;
-    display: block;
-    padding: 1.5rem;
+    padding: 1.5rem 2.2rem;
     border-radius: 2.5rem;
-    border: 1px solid;
 }
+
+
+
+
 
 footer {
+    padding: 13.2rem 2.0rem 2.8rem;
     background-color: var(--dark-blue-footer-background-color);
-    padding: 12.3rem 2.2rem 2.5rem;
+}
+
+footer .capsule {
+    max-width: 1120px;
 }
 
 .sitemap-page {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.0rem;
+    margin-top: 2.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
 }
 
 address {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 address div {
@@ -261,11 +319,82 @@ address div {
 .sitemap-links {
     display: flex;
     flex-direction: column;
-    gap: 3.0rem;
+    gap: 2.8rem;
 }
 
 .sitemap-links ul {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    body {
+        font-size: 1.6rem
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .services-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 15rem;
+        row-gap: 12rem;
+    }
+
+    .ourwork-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .review-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reviewer-card {
+        gap: 2.0rem;
+        padding: 2.5rem 3.5rem;
+    }
+
+    .register-content {
+        padding: 3.5rem 6.8rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form {
+        flex-direction: row;
+    }
+
+    label {
+        flex-grow: 1;
+    }
+
+    .sitemap-page {
+        grid-template-columns: 2fr 1fr 1fr;
+        justify-content: space-between;
+    }
+
+    .sitemap-links {
+        flex-direction: row;
+        gap: 6.8rem;
+    }
+
+    address {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    address div:nth-child(1) {
+        grid-row: 1 / 3;
+    }
 }
